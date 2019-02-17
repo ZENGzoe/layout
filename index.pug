@@ -1,0 +1,154 @@
+doctype html
+html
+    head
+        meta(charset="UTF-8")
+        title='部分特殊布局的实现'
+        link(rel='stylesheet' href='css/index.css')
+    body
+div.three
+    h1 双飞翼布局和圣杯布局
+        h2 padding实现圣杯布局
+            div.sheng_padding
+                div.middle middle
+                div.left left
+                div.right right
+        h2 flex实现圣杯布局
+            div.sheng_flex
+                div.middle middle
+                div.left left
+                div.right right
+        h2 实现双飞翼布局
+            div.fly_padding
+                div.middle 
+                    div.innerMiddle middle 
+                div.left left
+                div.right right
+div.responsible
+    h1 实现多列等高的方法
+        h2 padding+margin实现多列等高的方法
+            div.responsible
+                div.responsible_padMar
+                    div.left 
+                        p content
+                    div.right
+                        p content
+                        p content
+                        p content
+                        p content
+        h2 border实现多列等高的方法
+            div.responsible
+                div.responsible_border
+                    div.left 
+                        p content
+                    div.right
+                        p content
+                        p content
+                        p content
+                        p content
+        h2 linear-gradient实现多列等高的方法
+            div.responsible
+                div.responsible_linear
+                    div.left 
+                        p content
+                    div.right
+                        p content
+                        p content
+                        p content
+                        p content
+        h2 flex实现多列等高的方法
+            div.responsible
+                div.responsible_flex
+                    div.left 
+                        p content
+                    div.right
+                        p content
+                        p content
+                        p content
+                        p content
+        h2 grid实现多列等高的方法
+            div.responsible
+                div.responsible_grid
+                    div.left 
+                        p content
+                    div.right
+                        p content
+                        p content
+                        p content
+                        p content
+        h2 display:table实现多列等高的方法
+            div.responsible
+                div.responsible_table
+                    div.left 
+                        p content
+                    div.right
+                        p content
+                        p content
+                        p content
+                        p content
+div.sketch
+    h1 实现单列等宽，其他多列自适应均匀布局
+        h2 flex实现实现单列等宽，其他多列自适应均匀布局
+            div.sketch_flex
+                -for(var i = 0 ; i < 4 ; i++)
+                    div.item #{i}
+        h2 grid实现单列等宽，其他多列自适应均匀布局
+            div.sketch_grid
+                -for(var i = 0 ; i < 4 ; i++)
+                    div.item #{i}
+        h2 absolute+float+calc实现单列等宽，其他多列自适应均匀布局
+            div.sketch_calc
+                -for(var i = 0 ; i < 4 ; i++)
+                    div.item #{i}
+        h2 absolute+float+非calc实现单列等宽，其他多列自适应均匀布局
+            div.sketch_normal
+                div.g_left 0
+                div.g_col
+                    div.g_row
+                        -for(var i = 1 ; i < 4 ; i++)
+                            div.item_box
+                                div.item  #{i}
+div.cross
+    h1 实现跨行或跨列布局
+        h2 float实现跨行或跨列布局
+        div.cross-float1
+            -for(var i = 0 ; i < 3 ; i++)
+                div.item #{i+1}
+        div.cross-float2
+            -for(var i = 0 ; i < 3 ; i++)
+                div.item #{i+1}
+        h2 flexbox实现跨行或跨列布局
+        div.cross-flex1
+            -for(var i = 0 ; i < 3 ; i++)
+                div.item #{i+1}
+        div.cross-flex2
+            -for(var i = 0 ; i < 3 ; i++)
+                div.item #{i+1}
+        h2 grid实现跨行或跨列布局
+        div.cross-grid1
+            -for(var i = 0 ; i < 3 ; i++)
+                div.item #{i+1}
+        div.cross-grid2
+            -for(var i = 0 ; i < 3 ; i++)
+                div.item #{i+1}
+div.pubu
+    h1 实现瀑布流
+        h2 column-count实现瀑布流
+        div.g-container2
+            -for(var i = 0 ; i < 32 ; i++)
+                div.g-item
+
+
+        h2 flexbox实现瀑布流
+        div.g-container
+            -for(var i = 0 ; i < 4 ; i++)
+                div.g-queue
+                    -for(var j = 1 ; j < 8 ; j++)
+                        div.g-item
+
+
+        h2 Grid实现瀑布流
+        div.g-container3
+            -for(var i = 0 ; i < 8 ; i++)
+                div.g-item
+
+
